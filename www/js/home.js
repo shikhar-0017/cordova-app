@@ -84,6 +84,12 @@ function checkAge() {
     return;
   }
 
+  years = [];
+  setInput();
+  document
+    .getElementsByClassName("parental-gate")[0]
+    .classList.remove("active");
+
   // NAVIGATE TO PACKAGE SCREEN
   document
     .getElementById("myNavigator")
@@ -128,6 +134,12 @@ function setPlan(e) {
   document
     .getElementsByClassName("package-terms")[0]
     .classList.remove("hidden");
+
+  if (e.value === "MONTHLY") {
+    document.getElementById("package-term-amt").innerHTML = "$9.99 per month";
+  } else {
+    document.getElementById("package-term-amt").innerHTML = "$6.99 per year";
+  }
 }
 
 function startDebit() {
@@ -150,23 +162,28 @@ function startPurchase(debit) {
   let packageName = document.querySelector(
     'input[name="package"]:checked'
   ).value;
+
   let packageDuration = 0;
+  let packageTime = "";
 
   if (debit) {
     if (packageName === "MONTHLY") {
       packageDuration = 780000; // MONTHLY DURATION (13 mins) in ms
+      packageTime = "13 mins";
     } else {
       packageDuration = 1560000; // YEARLY DURATION (26 mins) in ms
+      packageTime = "26 mins";
     }
   } else {
     // WHEN USER NOT OPTED FOR AUTO DEBIT
     packageName = "FREE TRIAL";
     packageDuration = 120000; // TRIAL DURATION (2 mins) in ms
+    packageTime = "2 mins";
   }
 
   const expiresIn = Date.now() + packageDuration;
   let package = {
-    name: packageName,
+    name: packageName + ": " + packageTime,
     expiresIn,
   };
 
@@ -176,4 +193,8 @@ function startPurchase(debit) {
     .then(function () {
       window.localStorage.setItem("package", JSON.stringify(package));
     });
+}
+
+function goBack() {
+  document.getElementById("myNavigator").popPage();
 }

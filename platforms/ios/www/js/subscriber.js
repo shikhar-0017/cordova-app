@@ -23,8 +23,6 @@ function startCountDown(packageData) {
 
   const secondsRemaining = parseInt((expiresIn - currentTime) / 1000);
 
-  console.log(secondsRemaining);
-
   if (currentTime >= expiresIn || secondsRemaining <= 0) {
     container.innerHTML = `
       <h1 class="red-text">Subcription end</h1>

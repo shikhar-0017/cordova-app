@@ -86,11 +86,15 @@
 		</data>
 		<key>www/css/index.css</key>
 		<data>
-		wqPmPmKk37NB8aCAyFpASQ7y2ek=
+		0pbgXHT3z2ANBC/RWKTgh83EtPM=
 		</data>
 		<key>www/fonts/Gotham-Bold.otf</key>
 		<data>
 		9MgScuppxfe8oW33tK9kVgdnlsc=
+		</data>
+		<key>www/fonts/Inter-Bold.ttf</key>
+		<data>
+		R7t2i8Dc5wcqDBFWLHauxC7dG2o=
 		</data>
 		<key>www/fonts/Inter-Medium.ttf</key>
 		<data>
@@ -122,7 +126,7 @@
 		</data>
 		<key>www/home.html</key>
 		<data>
-		7NAGSwCmP5fVEmmyo6uXPHZTIyM=
+		gRqOjBJCVr/Msgula2c9TSnc6bg=
 		</data>
 		<key>www/img/carousels/Frame_1.png</key>
 		<data>
@@ -164,9 +168,17 @@
 		<data>
 		bxdGgXEdbWG5xoe8e9uG78p/6mA=
 		</data>
+		<key>www/img/plan-checked.svg</key>
+		<data>
+		3NPAwea2sGga/GfpAornuEV3bd8=
+		</data>
 		<key>www/img/plan-unchecked.png</key>
 		<data>
 		XG/7kyS9Z1rsVIw1kjboskEPRD4=
+		</data>
+		<key>www/img/plan-unchecked.svg</key>
+		<data>
+		u2k6RqR9Worf31j7Nv3lMtTl/jY=
 		</data>
 		<key>www/img/thankyou-bg.png</key>
 		<data>
@@ -178,15 +190,15 @@
 		</data>
 		<key>www/js/home.js</key>
 		<data>
-		yUE3NHO+vrfbd/exi1yHxn1OkGI=
+		xqQr84DiYM8bq1V6kSKjUvmOTB4=
 		</data>
 		<key>www/js/index.js</key>
 		<data>
-		HPuqAx1TaLlW4slshFvQ8cASBe0=
+		jCi8UZtJd2VV5flIvmoTDV3DzZg=
 		</data>
 		<key>www/js/subscriber.js</key>
 		<data>
-		XPGiOh+J6shNFHOMDsd3PAXZTcc=
+		c7SHLYEqS4a1oFeS22j8rcaDigw=
 		</data>
 		<key>www/subscriber.html</key>
 		<data>
@@ -325,7 +337,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5kffYRBQEz62l4Vc54j+1H6TOxUB2YGQKYNTzPR7Wg4=
+			iPwrfUooJCswhiKCgEoEh0QkLLtZJKW1dwfmgxeQbVo=
 			</data>
 		</dict>
 		<key>www/fonts/Gotham-Bold.otf</key>
@@ -333,6 +345,13 @@
 			<key>hash2</key>
 			<data>
 			wg2Rzb1gRu3xxW/mdGgWul7Y8LvNgsxvokqRwXeim5U=
+			</data>
+		</dict>
+		<key>www/fonts/Inter-Bold.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			1ZfnU+eNi/nbNMEzQxRlRfs75aHJmhdbw4H+P294fzE=
 			</data>
 		</dict>
 		<key>www/fonts/Inter-Medium.ttf</key>
@@ -388,7 +407,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+1zAkBsUWpZzhG6sKGnaAuNnBt5VEOAkYykBbFycaOs=
+			DcKWMczVsMzd5pbj8EWyFLo0Ud6TaaiF+yAa6BylXwA=
 			</data>
 		</dict>
 		<key>www/img/carousels/Frame_1.png</key>
@@ -461,11 +480,25 @@
 			qtHYHsqFu9Fmo4j/RFIjQjC8kIyHmp8w8qPhEqn+YjQ=
 			</data>
 		</dict>
+		<key>www/img/plan-checked.svg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			vxSdx5WOYaLZ4iIAWkxWzzMcXN/UA4tJD3gEPyoJgmE=
+			</data>
+		</dict>
 		<key>www/img/plan-unchecked.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
 			fkKnSfuDDhOPHHMNq1URl3I/BCVpVzGhfe2atI9C4sY=
+			</data>
+		</dict>
+		<key>www/img/plan-unchecked.svg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Uywes7QmWwHgDfbQQhIUTWcfQzk6VqELz/wfTUKvnds=
 			</data>
 		</dict>
 		<key>www/img/thankyou-bg.png</key>
@@ -486,21 +519,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			W9awJNI/UE02+NS2jG2VIq4ZCX8hXvtqsf/C9ddHRDg=
+			u5thtsmpY0WiWRFGRkJsKeRg+ZiwZg+5LPFpGSTGRF0=
 			</data>
 		</dict>
 		<key>www/js/index.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sfN/UptxNVBDueu7okIIh3g6p9Z99H8Sw9tkOK+pwV0=
+			7QjwZiYvNrVbz3aHBmeIM5zmReOsURWZKkyTrkjjeOU=
 			</data>
 		</dict>
 		<key>www/js/subscriber.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			838fjwUqrRDzAXGZwXQvU8WZSmNoJWJ8W6w/c19bq2Y=
+			luDYj+LNOLJA+OBXbjWgrwKZR4oTWPbjDpWbSsr1LKs=
 			</data>
 		</dict>
 		<key>www/subscriber.html</key>

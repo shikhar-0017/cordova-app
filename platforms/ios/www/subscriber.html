@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, viewport-fit=cover, user-scalable=0"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="./framework/css/onsenui.css" />
+    <link rel="stylesheet" href="./framework/css/onsenui-components.css" />
+    <script src="./framework/js/onsenui.js"></script>
+
+    <title>Subscriber Screen</title>
+  </head>
+  <body>
+    <ons-navigator
+      swipeable
+      id="myNavigator"
+      page="subscriber.html"
+    ></ons-navigator>
+
+    <!-- PITCH SCREEN TEMPLATE -->
+    <template id="subscriber.html">
+      <ons-page id="subscriber">
+        <div class="screen-area">
+          <div class="screen-center">
+            <div id="content">
+              <ons-progress-circular indeterminate></ons-progress-circular>
+            </div>
+
+            <!-- <h1 class="red-text">Free trial</h1>
+            <ons-button class="primary"
+              >Subscription ends in 10 seconds</ons-button
+            > -->
+          </div>
+        </div>
+      </ons-page>
+    </template>
+
+    <script src="cordova.js"></script>
+    <script src="js/subscriber.js"></script>
+  </body>
+</html>

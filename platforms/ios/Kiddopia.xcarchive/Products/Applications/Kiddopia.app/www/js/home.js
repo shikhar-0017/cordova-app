@@ -143,16 +143,23 @@ function setPlan(e) {
 }
 
 function startDebit() {
-  var dialog = document.getElementById("my-alert-dialog");
+  const packageData = JSON.parse(window.localStorage.getItem("package"));
 
-  if (dialog) {
-    dialog.show();
+  if (packageData == null || packageData.expiresIn < Date.now()) {
+    var dialog = document.getElementById("my-alert-dialog");
+
+    if (dialog) {
+      dialog.show();
+    } else {
+      ons
+        .createElement("alert-dialog.html", { append: true })
+        .then(function (dialog) {
+          dialog.show();
+        });
+    }
   } else {
-    ons
-      .createElement("alert-dialog.html", { append: true })
-      .then(function (dialog) {
-        dialog.show();
-      });
+    alert(`${packageData.name} Package already active`);
+    window.location = "subscriber.html";
   }
 }
 
@@ -183,13 +190,14 @@ function startPurchase(debit) {
 
   const expiresIn = Date.now() + packageDuration;
   let package = {
-    name: packageName + ": " + packageTime,
+    name: packageName,
     expiresIn,
+    duration: packageTime,
   };
 
   document
     .getElementById("myNavigator")
-    .pushPage("thankyou.html")
+    .resetToPage("thankyou.html", { animation: "push" })
     .then(function () {
       window.localStorage.setItem("package", JSON.stringify(package));
     });

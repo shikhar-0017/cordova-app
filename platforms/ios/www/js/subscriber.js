@@ -33,6 +33,6 @@ function startCountDown(packageData) {
   }
 
   container.innerHTML = `
-    <h1 class="red-text">${packageData.name}</h1>
+    <h1 class="red-text">${packageData.name}: ${packageData.duration}</h1>
     <ons-button class="primary">Subscription ends in ${secondsRemaining} seconds</ons-button>`;
 }

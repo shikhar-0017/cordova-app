@@ -12,7 +12,7 @@ window.onload = () => {
       } else {
         // SUBSCRIPTION ENDS
         window.localStorage.removeItem("package"); // REMOVE KEY FROM STORAGE
-        window.location = "home.html";
+        window.location = "home.html"; // REDIRECT TO PITCH SCREEN
       }
     }
   }, SPLASH_SCREEN_TIMEOUT);

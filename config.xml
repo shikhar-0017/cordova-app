@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.kiddopia.ios" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.paperboatapps.all-in-one" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Kiddopia</name>
     <description>Sample Apache Cordova App</description>
     <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
@@ -11,5 +11,9 @@
 
     <preference name="Orientation" value="portrait" />
     <preference name="DisallowOverscroll" value="true" />
+
+    <platform name="ios">
+        <resource-file src="www/pn-actions.json" />
+    </platform>
 
 </widget>

@@ -1,0 +1,20 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-firebasex": {
+      "FIREBASE_ANALYTICS_COLLECTION_ENABLED": "true",
+      "FIREBASE_PERFORMANCE_COLLECTION_ENABLED": "true",
+      "FIREBASE_CRASHLYTICS_COLLECTION_ENABLED": "true",
+      "FIREBASE_FCM_AUTOINIT_ENABLED": "true",
+      "IOS_USE_PRECOMPILED_FIRESTORE_POD": "false",
+      "PACKAGE_NAME": "com.paperboatapps.all-in-one"
+    }
+  },
+  "dependent_plugins": {}
+}

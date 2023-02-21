@@ -1,6 +1,38 @@
 // GLOBAL VARIABLES
 var carouselInterval;
 
+document.addEventListener("deviceready", function () {
+  FirebasePlugin.getToken(
+    function (fcmToken) {
+      alert(fcmToken);
+      console.log(fcmToken);
+    },
+    function (error) {
+      alert("Error: " + error);
+    }
+  );
+
+  FirebasePlugin.hasPermission(function (hasPermission) {
+    if (!hasPermission) {
+      FirebasePlugin.grantPermission(function (granted) {
+        if (granted) {
+          console.log("Permission granted");
+        }
+      });
+    }
+  });
+
+  FirebasePlugin.onMessageReceived(
+    function (message) {
+      console.log(message);
+      alert(JSON.stringify(message));
+    },
+    function (error) {
+      console.error(error);
+    }
+  );
+});
+
 document.addEventListener("init", function (e) {
   const id = e.target.id; // PAGE ID
   if (id === "pitch") {

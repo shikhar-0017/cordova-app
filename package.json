@@ -1,5 +1,5 @@
 {
-  "name": "com.kiddopia.ios",
+  "name": "com.paperboatapps.all-in-one",
   "displayName": "Kiddopia",
   "version": "1.0.0",
   "description": "A sample Apache Cordova application that responds to the deviceready event.",
@@ -13,11 +13,25 @@
   "author": "Apache Cordova Team",
   "license": "Apache-2.0",
   "devDependencies": {
-    "cordova-ios": "^6.2.0"
+    "cordova-ios": "^6.2.0",
+    "cordova-plugin-firebasex": "^16.0.0",
+    "cordova-plugin-firebasex-fix": "^15.0.0"
   },
   "cordova": {
     "platforms": [
       "ios"
-    ]
+    ],
+    "plugins": {
+      "cordova-plugin-firebasex": {
+        "FIREBASE_ANALYTICS_COLLECTION_ENABLED": "true",
+        "FIREBASE_PERFORMANCE_COLLECTION_ENABLED": "true",
+        "FIREBASE_CRASHLYTICS_COLLECTION_ENABLED": "true",
+        "FIREBASE_FCM_AUTOINIT_ENABLED": "true",
+        "IOS_USE_PRECOMPILED_FIRESTORE_POD": "false"
+      }
+    }
+  },
+  "dependencies": {
+    "cocoapods": "^0.0.0"
   }
 }

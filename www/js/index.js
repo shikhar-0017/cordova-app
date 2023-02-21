@@ -1,4 +1,4 @@
-const SPLASH_SCREEN_TIMEOUT = 3000;
+const SPLASH_SCREEN_TIMEOUT = 2000;
 
 window.onload = () => {
   const packageData = JSON.parse(window.localStorage.getItem("package"));

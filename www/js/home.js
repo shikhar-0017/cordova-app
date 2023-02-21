@@ -2,9 +2,10 @@
 var carouselInterval;
 
 document.addEventListener("deviceready", function () {
+  // GET REGISTRATION TOKEN FROM FCM
   FirebasePlugin.getToken(
     function (fcmToken) {
-      alert(fcmToken);
+      // alert(fcmToken);
       console.log(fcmToken);
     },
     function (error) {
@@ -12,26 +13,62 @@ document.addEventListener("deviceready", function () {
     }
   );
 
+  // SUBSCRIBE TO NEWS TOPIC
+  FirebasePlugin.subscribe(
+    "news",
+    function () {
+      console.log("Subscribed to topic");
+    },
+    function (error) {
+      console.error("Error subscribing to topic: " + error);
+    }
+  );
+
+  // CHECK IF USER HAS GRANTED NOTIFICATION PERMISSION
   FirebasePlugin.hasPermission(function (hasPermission) {
+    const granted = window.localStorage.getItem("isPermissionGranted");
     if (!hasPermission) {
-      FirebasePlugin.grantPermission(function (granted) {
-        if (granted) {
-          console.log("Permission granted");
+      if (granted == null) {
+        var dialog = document.getElementById("notification-dialog");
+
+        if (dialog) {
+          dialog.show();
+        } else {
+          ons
+            .createElement("notification-dialog.html", { append: true })
+            .then(function (dialog) {
+              dialog.show();
+            });
         }
-      });
+      }
     }
   });
 
+  // EVENT WHEN USER OPEN APP BY CLICKING ON NOTIFICATION
   FirebasePlugin.onMessageReceived(
     function (message) {
       console.log(message);
-      alert(JSON.stringify(message));
+      // alert(JSON.stringify(message));
     },
     function (error) {
       console.error(error);
     }
   );
 });
+
+function hideNotificationDialog() {
+  document.getElementById("notification-dialog").hide();
+}
+
+function getPermission() {
+  document.getElementById("notification-dialog").hide();
+  FirebasePlugin.grantPermission(function (granted) {
+    window.localStorage.setItem("isPermissionGranted", granted);
+    if (granted) {
+      console.log("Permission granted");
+    }
+  });
+}
 
 document.addEventListener("init", function (e) {
   const id = e.target.id; // PAGE ID

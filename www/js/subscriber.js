@@ -4,9 +4,14 @@ document.addEventListener("init", function (e) {
   const packageData = JSON.parse(window.localStorage.getItem("package"));
   const container = document.getElementById("content");
 
+  const granted = window.localStorage.getItem("isPermissionGranted");
+  if (granted == null) {
+    document.getElementById("allow").style.display = "block";
+  }
+
   if (packageData == null) {
     container.innerHTML = `
-    <h1 class="red-text">Subcription end</h1>
+    <h1 class="red-text">No Subcription Found</h1>
     <ons-button class="primary" onclick="window.location = 'home.html'">Start free trial</ons-button>`;
     return;
   }
@@ -34,5 +39,22 @@ function startCountDown(packageData) {
 
   container.innerHTML = `
     <h1 class="red-text">${packageData.name}: ${packageData.duration}</h1>
-    <ons-button class="primary">Subscription ends in ${secondsRemaining} seconds</ons-button>`;
+    <ons-button class="primary">Subscription ends in ${secondsRemaining} seconds</ons-button>
+    <br />
+    <br />
+    <ons-button class="primary" onclick="reset()">Reset subscription</ons-button>`;
+}
+
+function reset() {
+  window.localStorage.removeItem("package");
+  window.location = "home.html";
+}
+
+function getPermission() {
+  FirebasePlugin.grantPermission(function (granted) {
+    window.localStorage.setItem("isPermissionGranted", granted);
+    if (granted) {
+      console.log("Permission granted");
+    }
+  });
 }

@@ -20,7 +20,7 @@
     <template id="pitch.html">
       <ons-page id="pitch">
         <div class="screen-area">
-          <div class="close-icon">
+          <div class="close-icon" onclick="window.location = 'subscriber.html'">
             <img src="img/icons/close-icon.png" />
           </div>
 
@@ -147,7 +147,7 @@
     <template id="package.html">
       <ons-page id="package">
         <div class="screen-area">
-          <div class="close-icon">
+          <div class="close-icon" onclick="window.location = 'subscriber.html'">
             <img src="img/icons/close-icon.png" />
           </div>
 
@@ -273,6 +273,24 @@
           </div>
         </div>
       </ons-page>
+    </template>
+
+    <!-- NOTIFICATION PERMISSION -->
+    <template id="notification-dialog.html">
+      <ons-alert-dialog id="notification-dialog" modifier="rowfooter">
+        <div class="alert-dialog-title">App POPUP!</div>
+        <div class="alert-dialog-content">
+          There's always something new in Kiddopia. Don't miss out on it!
+        </div>
+        <div class="alert-dialog-footer">
+          <ons-alert-dialog-button onclick="hideNotificationDialog()"
+            >Maybe later</ons-alert-dialog-button
+          >
+          <ons-alert-dialog-button onclick="getPermission()"
+            >Yes!</ons-alert-dialog-button
+          >
+        </div>
+      </ons-alert-dialog>
     </template>
 
     <!-- AUTO DEBIT DIALOG -->

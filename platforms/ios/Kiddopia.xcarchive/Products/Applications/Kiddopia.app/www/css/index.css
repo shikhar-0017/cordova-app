@@ -61,6 +61,14 @@ ons-button.primary {
   font-weight: 500;
 }
 
+#notification-dialog .alert-dialog-container {
+  background: #ffb9b9;
+}
+
+#allow {
+  display: none;
+}
+
 .primary-text-dark {
   color: #4f4f4f;
   font-weight: 500;

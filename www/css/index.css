@@ -129,7 +129,7 @@ div {
 }
 
 .hidden {
-  display: none !important;
+  display: none;
 }
 
 .text-center {
@@ -435,6 +435,7 @@ div {
 
 .package-container {
   display: flex;
+  justify-content: center;
   gap: min(5vw, 80px);
   max-width: min(82vw, 600px);
   margin: auto;
@@ -442,7 +443,8 @@ div {
 }
 
 .package-container .package {
-  width: 100%;
+  width: 45%;
+  min-width: 45%;
   height: min(40vw, 270px);
   background: #ffffff;
   border: 1.2vw solid #e0e0e0;
@@ -506,11 +508,12 @@ div {
 }
 
 .package-terms {
-  padding: 0px 6vw;
+  padding: 0px 4vw;
 }
 
-.package-terms p {
-  font-size: min(2.2vw, 14px);
+.package-terms p,
+.package-terms a {
+  font-size: min(2.2vw, 14px) !important;
 }
 
 #package-term-amt {
@@ -582,7 +585,7 @@ p.package-note {
   color: #fff;
   font-family: "Plumpfull" !important;
   letter-spacing: 0.3px;
-  font-size: min(5vw, 30px) !important;
+  font-size: min(4vw, 26px) !important;
 }
 
 #thankyou .screen-area .content {

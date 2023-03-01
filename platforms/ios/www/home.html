@@ -6,312 +6,41 @@
       name="viewport"
       content="initial-scale=1, viewport-fit=cover, user-scalable=0"
     />
-    <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="./framework/css/onsenui.css" />
-    <link rel="stylesheet" href="./framework/css/onsenui-components.css" />
-    <script src="./framework/js/onsenui.js"></script>
+    <link rel="stylesheet" href="https://kiddopia-cordova.web.app/css/index.css" />
+    <link rel="stylesheet" href="framework/css/onsenui.css" />
+    <link rel="stylesheet" href="framework/css/onsenui-components.css" />
+    <script src="framework/js/onsenui.js"></script>
 
     <title>Pitch Screen</title>
   </head>
   <body>
-    <ons-navigator swipeable id="myNavigator" page="pitch.html"></ons-navigator>
-
-    <!-- PITCH SCREEN TEMPLATE -->
-    <template id="pitch.html">
-      <ons-page id="pitch">
-        <div class="screen-area">
-          <div class="close-icon" onclick="window.location = 'subscriber.html'">
-            <img src="img/icons/close-icon.png" />
-          </div>
-
-          <div class="banner-container">
-            <ons-carousel
-              swipeable
-              fullscreen
-              auto-scroll
-              auto-scroll-ratio="0.0"
-              id="pitch-carousel"
-            >
-              <ons-carousel-item>
-                <div class="banner-image">
-                  <img src="img/carousels/Frame_1.png" />
-                </div>
-                <h2>Unlimited<br />Learning</h2>
-              </ons-carousel-item>
-              <ons-carousel-item>
-                <div class="banner-image">
-                  <img src="img/carousels/Frame_2.png" />
-                </div>
-                <h2>New content<br />added regularly</h2>
-              </ons-carousel-item>
-              <ons-carousel-item>
-                <div class="banner-image">
-                  <img src="img/carousels/Frame_3.png" />
-                </div>
-                <h2>Certified<br />kidSAFE</h2>
-              </ons-carousel-item>
-              <ons-carousel-item>
-                <div class="banner-image">
-                  <img src="img/carousels/Frame_4.png" />
-                </div>
-                <h2>One subscription for<br />the whole family!</h2>
-              </ons-carousel-item>
-            </ons-carousel>
-
-            <div class="carousel-indicator"></div>
-          </div>
-
-          <div class="bottom-content-area">
-            <div class="content">
-              <img src="img/logo.svg" class="logo" />
-
-              <div class="small-gap">
-                <h1 class="red-text">Start your<br />7-Day Free Trial</h1>
-                <p class="primary-text-dark">No commitment, cancel anytime.</p>
-              </div>
-
-              <ons-button class="primary" onclick="toggleParentalGate()">
-                Start Free Trial
-              </ons-button>
-
-              <div class="small-gap" style="margin-bottom: 0px !important">
-                <p class="secondary-text-dark">
-                  Already have a Kiddopia account?
-                </p>
-                <a>Sign in</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- PARENTAL GATE FORM -->
-          <div class="parental-gate">
-            <div class="form">
-              <div class="content text-center">
-                <div class="close-icon" onclick="toggleParentalGate()">
-                  <img src="img/icons/close-white.png" style="width: 20px" />
-                </div>
-
-                <br />
-
-                <h1 class="mb-0">Hi there!</h1>
-                <p style="margin-top: 6px">
-                  Please ask a grown up to enter<br />their year of birth to
-                  continue
-                </p>
-
-                <div class="keyboard-container">
-                  <div class="input-container">
-                    <div class="input"></div>
-                    <div class="input"></div>
-                    <div class="input"></div>
-                    <div class="input"></div>
-                  </div>
-
-                  <div class="keyboard-button-container">
-                    <div class="button-container">
-                      <div class="button" onclick="setAge(1)">1</div>
-                      <div class="button" onclick="setAge(2)">2</div>
-                      <div class="button" onclick="setAge(3)">3</div>
-                    </div>
-                    <div class="button-container">
-                      <div class="button" onclick="setAge(4)">4</div>
-                      <div class="button" onclick="setAge(5)">5</div>
-                      <div class="button" onclick="setAge(6)">6</div>
-                    </div>
-                    <div class="button-container">
-                      <div class="button" onclick="setAge(7)">7</div>
-                      <div class="button" onclick="setAge(8)">8</div>
-                      <div class="button" onclick="setAge(9)">9</div>
-                    </div>
-                    <div class="button-container">
-                      <div class="button" onclick="setAge(0)">0</div>
-                      <div class="button clear" onclick="clearAge()">
-                        ⌫ Clear
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <p class="secondary-text-white">
-                  The information is not stored and is only used to<br />confirm
-                  that you are a grown up.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </ons-page>
-    </template>
-
-    <!-- PACKAGE SCREEN TEMPLATE -->
-    <template id="package.html">
-      <ons-page id="package">
-        <div class="screen-area">
-          <div class="close-icon" onclick="window.location = 'subscriber.html'">
-            <img src="img/icons/close-icon.png" />
-          </div>
-
-          <div class="back-icon" onclick="goBack()">
-            <img src="img/icons/back-icon.png" />
-          </div>
-
-          <div class="banner-container">
-            <div class="banner-image">
-              <img src="img/package-banner.png" />
-            </div>
-          </div>
-
-          <div class="bottom-content-area">
-            <div class="package-content">
-              <div class="banner-heading">
-                <h2>Get</h2>
-                <img src="img/logo.svg" class="logo" />
-                <h2>today!</h2>
-              </div>
-
-              <br />
-
-              <div class="package-container">
-                <div class="package">
-                  <label for="month">
-                    <div class="package-header">
-                      <h2 class="package-duration">Monthly</h2>
-                      <img />
-                    </div>
-
-                    <div class="package-amount">
-                      <h3></h3>
-                      <h2>$9.99</h2>
-                      <p>per month</p>
-                    </div>
-
-                    <p class="package-note">Billed Monthly<br />at $6.99</p>
-                  </label>
-
-                  <input
-                    type="radio"
-                    value="MONTHLY"
-                    id="month"
-                    name="package"
-                    hidden
-                    onchange="setPlan(this)"
-                  />
-                </div>
-
-                <div class="package">
-                  <label for="year">
-                    <div class="package-savings">
-                      <div class="savings">
-                        <h3>SAVE $3</h3>
-                      </div>
-                    </div>
-
-                    <div class="package-header">
-                      <h2 class="package-duration">Yearly</h2>
-                      <img />
-                    </div>
-
-                    <div class="package-amount">
-                      <h3>$9.99</h3>
-                      <h2>$6.99</h2>
-                      <p>per year</p>
-                    </div>
-
-                    <p class="package-note">Billed yearly<br />at $6.99</p>
-                  </label>
-
-                  <input
-                    type="radio"
-                    value="YEARLY"
-                    id="year"
-                    name="package"
-                    hidden
-                    onchange="setPlan(this)"
-                  />
-                </div>
-              </div>
-
-              <h1 class="red-text">Try FREE for 7 Days</h1>
-              <p class="primary-text-dark">No commitment, cancel anytime.</p>
-
-              <ons-button
-                class="primary"
-                disabled
-                id="start-trial"
-                onclick="startDebit()"
-              >
-                Start Free Trial
-              </ons-button>
-
-              <div class="package-terms hidden">
-                <p class="secondary-text-dark">
-                  After your Free Trial, your iTunes account will be charged
-                  automatically at
-                  <span id="package-term-amt">$6.99 per year</span>. By
-                  continuing you agree to Kiddopia's Terms of Service and
-                  Privacy Policy
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </ons-page>
-    </template>
-
-    <!-- THANK YOU PAGE -->
-    <template id="thankyou.html">
-      <ons-page id="thankyou">
-        <div class="screen-area">
-          <div class="content">
-            <h1>Thank you!</h1>
-            <h4>Kiddopia is now all set for your kid to take over!</h4>
-            <ons-button
-              class="primary"
-              onclick="window.location = 'subscriber.html'"
-              >Start playing</ons-button
-            >
-          </div>
-        </div>
-      </ons-page>
-    </template>
-
-    <!-- NOTIFICATION PERMISSION -->
-    <template id="notification-dialog.html">
-      <ons-alert-dialog id="notification-dialog" modifier="rowfooter">
-        <div class="alert-dialog-title">App POPUP!</div>
-        <div class="alert-dialog-content">
-          There's always something new in Kiddopia. Don't miss out on it!
-        </div>
-        <div class="alert-dialog-footer">
-          <ons-alert-dialog-button onclick="hideNotificationDialog()"
-            >Maybe later</ons-alert-dialog-button
-          >
-          <ons-alert-dialog-button onclick="getPermission()"
-            >Yes!</ons-alert-dialog-button
-          >
-        </div>
-      </ons-alert-dialog>
-    </template>
-
-    <!-- AUTO DEBIT DIALOG -->
-    <template id="alert-dialog.html">
-      <ons-alert-dialog id="my-alert-dialog" modifier="rowfooter">
-        <div class="alert-dialog-title">Auto Renew</div>
-        <div class="alert-dialog-content">
-          Do you want to auto renew once your free trial end?
-        </div>
-        <div class="alert-dialog-footer">
-          <ons-alert-dialog-button onclick="startPurchase(false)"
-            >No</ons-alert-dialog-button
-          >
-          <ons-alert-dialog-button onclick="startPurchase(true)"
-            >Yes</ons-alert-dialog-button
-          >
-        </div>
-      </ons-alert-dialog>
-    </template>
-
     <script src="cordova.js"></script>
-    <script src="js/home.js"></script>
   </body>
+
+  <script>
+    window.onload = function(){
+      const BASE_URL = `https://kiddopia-cordova.web.app/home.html?${Math.random()}`;
+
+      fetch(BASE_URL).then(function (response) {
+        // The API call was successful!
+        return response.text();
+      }).then(function (html) {
+
+        // Convert the HTML string into a document object
+        var doc = new DOMParser().parseFromString(html, 'text/html');        
+        
+        // document.querySelector("head").innerHTML = doc.head.innerHTML;
+        document.querySelector("body").innerHTML = doc.body.innerHTML;
+
+
+        const script3 = document.createElement("script");
+        script3.src = `https://kiddopia-cordova.web.app/js/home.js?${Math.random()}`;
+        document.querySelector("body").appendChild(script3);
+
+      }).catch(function (err) {
+        // There was an error
+        console.warn('Something went wrong.', err);
+      });
+    }
+  </script>
 </html>

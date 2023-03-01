@@ -1,3 +1,4 @@
 {
-    "AuthenticationServices.framework": 1
+    "UserNotifications.framework": 1,
+    "CoreLocation.framework": 1
 }

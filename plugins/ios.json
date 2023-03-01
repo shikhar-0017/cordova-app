@@ -7,14 +7,28 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-firebasex": {
-      "FIREBASE_ANALYTICS_COLLECTION_ENABLED": "true",
-      "FIREBASE_PERFORMANCE_COLLECTION_ENABLED": "true",
-      "FIREBASE_CRASHLYTICS_COLLECTION_ENABLED": "true",
-      "FIREBASE_FCM_AUTOINIT_ENABLED": "true",
-      "IOS_USE_PRECOMPILED_FIRESTORE_POD": "false",
+    "cordova-plugin-local-notification": {
+      "PACKAGE_NAME": "com.paperboatapps.all-in-one"
+    },
+    "cordova-plugin-purchases": {
+      "PACKAGE_NAME": "com.paperboatapps.all-in-one"
+    },
+    "cordova-plugin-native-spinner": {
       "PACKAGE_NAME": "com.paperboatapps.all-in-one"
     }
   },
-  "dependent_plugins": {}
+  "dependent_plugins": {
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.paperboatapps.all-in-one"
+    },
+    "cordova-plugin-badge": {
+      "PACKAGE_NAME": "com.paperboatapps.all-in-one"
+    },
+    "cordova-annotated-plugin-android": {
+      "PACKAGE_NAME": "com.paperboatapps.all-in-one"
+    },
+    "cordova-plugin-add-swift-support": {
+      "PACKAGE_NAME": "com.paperboatapps.all-in-one"
+    }
+  }
 }

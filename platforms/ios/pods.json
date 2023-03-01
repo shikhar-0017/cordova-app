@@ -6,70 +6,15 @@
         }
     },
     "sources": {
-        "https://cdn.cocoapods.org/": {
-            "source": "https://cdn.cocoapods.org/",
+        "https://github.com/CocoaPods/Specs.git": {
+            "source": "https://github.com/CocoaPods/Specs.git",
             "count": 1
         }
     },
     "libraries": {
-        "Firebase/Core": {
-            "name": "Firebase/Core",
-            "spec": "10.2.0",
-            "count": 1
-        },
-        "Firebase/Auth": {
-            "name": "Firebase/Auth",
-            "spec": "10.2.0",
-            "count": 1
-        },
-        "Firebase/Messaging": {
-            "name": "Firebase/Messaging",
-            "spec": "10.2.0",
-            "count": 1
-        },
-        "Firebase/Performance": {
-            "name": "Firebase/Performance",
-            "spec": "10.2.0",
-            "count": 1
-        },
-        "Firebase/RemoteConfig": {
-            "name": "Firebase/RemoteConfig",
-            "spec": "10.2.0",
-            "count": 1
-        },
-        "Firebase/InAppMessaging": {
-            "name": "Firebase/InAppMessaging",
-            "spec": "10.2.0",
-            "count": 1
-        },
-        "Firebase/Firestore": {
-            "name": "Firebase/Firestore",
-            "spec": "10.2.0",
-            "count": 1
-        },
-        "Firebase/Crashlytics": {
-            "name": "Firebase/Crashlytics",
-            "spec": "10.2.0",
-            "count": 1
-        },
-        "Firebase/Functions": {
-            "name": "Firebase/Functions",
-            "spec": "10.2.0",
-            "count": 1
-        },
-        "Firebase/Installations": {
-            "name": "Firebase/Installations",
-            "spec": "10.2.0",
-            "count": 1
-        },
-        "GoogleSignIn": {
-            "name": "GoogleSignIn",
-            "spec": "6.2.4",
-            "count": 1
-        },
-        "GoogleTagManager": {
-            "name": "GoogleTagManager",
-            "spec": "7.4.2",
+        "PurchasesHybridCommon": {
+            "name": "PurchasesHybridCommon",
+            "spec": "4.13.2",
             "count": 1
         }
     }

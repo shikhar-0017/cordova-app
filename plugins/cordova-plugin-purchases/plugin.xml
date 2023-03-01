@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-purchases" version="3.10.0">
+
+    <dependency id="cordova-annotated-plugin-android" />
+
+    <name>Purchases</name>
+    <description>Purchases Cordova Plugin</description>
+    <license>MIT</license>
+    <keywords>cordova,purchases,revenuecat,iap,inapp,in-app,storekit,purchase</keywords>
+    <js-module src="www/plugin.js" name="plugin">
+        <clobbers target="Purchases" />
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="PurchasesPlugin">
+                <param name="android-package" value="com.revenuecat.purchases.PurchasesPlugin" />
+            </feature>
+        </config-file>
+        <framework src="com.revenuecat.purchases:purchases-hybrid-common:4.13.2" />
+        <framework src="androidx.annotation:annotation:[1.4.0]"/>
+        <source-file src="src/android/PurchasesPlugin.java" target-dir="src/com/revenuecat/purchases"/>
+    </platform>
+    <platform name="ios">
+        <dependency id="cordova-plugin-add-swift-support" version="2.0.2"/>
+        <config-file target="config.xml" parent="/*">
+            <feature name="PurchasesPlugin">
+                <param name="ios-package" value="CDVPurchasesPlugin"/>
+            </feature>
+        </config-file>
+        <source-file src="src/ios/PurchasesPlugin.swift" />
+        <source-file src="src/ios/PurchasesPlugin+APIHelpers.swift" />
+        <source-file src="src/ios/PurchasesPlugin+Attribution.swift" />
+        <source-file src="src/ios/PurchasesPlugin+PurchasesDelegate.swift" />
+        <source-file src="src/ios/PurchasesPlugin+Purchasing.swift" />
+        <source-file src="src/ios/PurchasesPlugin+Users.swift" />
+        <podspec>
+            <config>
+                <source url="https://github.com/CocoaPods/Specs.git"/>
+            </config>
+            <pods use-frameworks="true">
+                <pod name="PurchasesHybridCommon" spec="4.13.2"/>
+            </pods>
+        </podspec>
+    </platform>
+    <params name="ANDROIDXENABLED" value="true" />
+</plugin>

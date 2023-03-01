@@ -8,12 +8,13 @@
     <content src="index.html" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+    <allow-intent href="https://kiddopia-cordova.web.app/" />
 
     <preference name="Orientation" value="portrait" />
     <preference name="DisallowOverscroll" value="true" />
-
+<!-- 
     <platform name="ios">
         <resource-file src="www/pn-actions.json" />
-    </platform>
+    </platform> -->
 
 </widget>

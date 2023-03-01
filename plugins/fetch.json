@@ -15,10 +15,42 @@
     "is_top_level": false,
     "variables": {}
   },
-  "cordova-plugin-firebasex": {
+  "cordova-plugin-local-notification": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-firebasex"
+      "id": "cordova-plugin-local-notification"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-annotated-plugin-android": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-annotated-plugin-android"
+    },
+    "is_top_level": false,
+    "variables": {}
+  },
+  "cordova-plugin-add-swift-support": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-add-swift-support@2.0.2"
+    },
+    "is_top_level": false,
+    "variables": {}
+  },
+  "cordova-plugin-purchases": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-purchases@^3.10.0"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-native-spinner": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-native-spinner"
     },
     "is_top_level": true,
     "variables": {}

@@ -14,24 +14,24 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "cordova-ios": "^6.2.0",
-    "cordova-plugin-firebasex": "^16.0.0",
-    "cordova-plugin-firebasex-fix": "^15.0.0"
+    "cordova-plugin-badge": "^0.8.8",
+    "cordova-plugin-device": "^2.1.0",
+    "cordova-plugin-local-notification": "^0.9.0-beta.2",
+    "cordova-plugin-native-spinner": "^1.1.4",
+    "cordova-plugin-purchases": "^3.10.0"
   },
   "cordova": {
     "platforms": [
       "ios"
     ],
     "plugins": {
-      "cordova-plugin-firebasex": {
-        "FIREBASE_ANALYTICS_COLLECTION_ENABLED": "true",
-        "FIREBASE_PERFORMANCE_COLLECTION_ENABLED": "true",
-        "FIREBASE_CRASHLYTICS_COLLECTION_ENABLED": "true",
-        "FIREBASE_FCM_AUTOINIT_ENABLED": "true",
-        "IOS_USE_PRECOMPILED_FIRESTORE_POD": "false"
-      }
+      "cordova-plugin-local-notification": {},
+      "cordova-plugin-purchases": {},
+      "cordova-plugin-native-spinner": {}
     }
   },
   "dependencies": {
-    "cocoapods": "^0.0.0"
+    "cocoapods": "^0.0.0",
+    "cordova-plugin-add-swift-support": "2.0.2"
   }
 }

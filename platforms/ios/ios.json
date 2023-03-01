@@ -9,7 +9,23 @@
         "parents": {
           "/*": [
             {
-              "xml": "<feature name=\"FirebasePlugin\"><param name=\"ios-package\" value=\"FirebasePlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"Badge\"><param name=\"ios-package\" value=\"APPBadge\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"LocalNotification\"><param name=\"ios-package\" value=\"APPLocalNotification\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"PurchasesPlugin\"><param name=\"ios-package\" value=\"CDVPurchasesPlugin\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"SpinnerDialog\"><param name=\"ios-package\" value=\"CDVSpinnerDialog\" /></feature>",
               "count": 1
             }
           ]
@@ -17,58 +33,112 @@
       },
       "*/Entitlements-Debug.plist": {
         "parents": {
-          "aps-environment": [
-            {
-              "xml": "<string>development</string>",
-              "count": 1
-            }
-          ]
+          "aps-environment": []
         }
       },
       "*/Entitlements-Release.plist": {
         "parents": {
-          "aps-environment": [
-            {
-              "xml": "<string>production</string>",
-              "count": 1
-            }
-          ]
+          "aps-environment": []
         }
       },
       "*-Info.plist": {
         "parents": {
-          "UIBackgroundModes": [
-            {
-              "xml": "<array><string>remote-notification</string></array>",
-              "count": 1
-            }
-          ]
+          "UIBackgroundModes": []
         }
       }
     }
   },
   "installed_plugins": {
-    "cordova-plugin-firebasex": {
-      "FIREBASE_ANALYTICS_COLLECTION_ENABLED": "true",
-      "FIREBASE_PERFORMANCE_COLLECTION_ENABLED": "true",
-      "FIREBASE_CRASHLYTICS_COLLECTION_ENABLED": "true",
-      "FIREBASE_FCM_AUTOINIT_ENABLED": "true",
-      "IOS_USE_PRECOMPILED_FIRESTORE_POD": "false",
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.paperboatapps.all-in-one"
+    },
+    "cordova-plugin-badge": {
+      "PACKAGE_NAME": "com.paperboatapps.all-in-one"
+    },
+    "cordova-plugin-local-notification": {
+      "PACKAGE_NAME": "com.paperboatapps.all-in-one"
+    },
+    "cordova-annotated-plugin-android": {
+      "PACKAGE_NAME": "com.paperboatapps.all-in-one"
+    },
+    "cordova-plugin-add-swift-support": {
+      "PACKAGE_NAME": "com.paperboatapps.all-in-one"
+    },
+    "cordova-plugin-purchases": {
+      "PACKAGE_NAME": "com.paperboatapps.all-in-one"
+    },
+    "cordova-plugin-native-spinner": {
       "PACKAGE_NAME": "com.paperboatapps.all-in-one"
     }
   },
   "dependent_plugins": {},
   "modules": [
     {
-      "id": "cordova-plugin-firebasex.FirebasePlugin",
-      "file": "plugins/cordova-plugin-firebasex/www/firebase.js",
-      "pluginId": "cordova-plugin-firebasex",
+      "id": "cordova-plugin-device.device",
+      "file": "plugins/cordova-plugin-device/www/device.js",
+      "pluginId": "cordova-plugin-device",
       "clobbers": [
-        "FirebasePlugin"
+        "device"
+      ]
+    },
+    {
+      "id": "cordova-plugin-badge.Badge",
+      "file": "plugins/cordova-plugin-badge/www/badge.js",
+      "pluginId": "cordova-plugin-badge",
+      "clobbers": [
+        "cordova.plugins.notification.badge"
+      ]
+    },
+    {
+      "id": "cordova-plugin-local-notification.LocalNotification",
+      "file": "plugins/cordova-plugin-local-notification/www/local-notification.js",
+      "pluginId": "cordova-plugin-local-notification",
+      "clobbers": [
+        "cordova.plugins.notification.local"
+      ]
+    },
+    {
+      "id": "cordova-plugin-local-notification.LocalNotification.Core",
+      "file": "plugins/cordova-plugin-local-notification/www/local-notification-core.js",
+      "pluginId": "cordova-plugin-local-notification",
+      "clobbers": [
+        "cordova.plugins.notification.local.core",
+        "plugin.notification.local.core"
+      ]
+    },
+    {
+      "id": "cordova-plugin-local-notification.LocalNotification.Util",
+      "file": "plugins/cordova-plugin-local-notification/www/local-notification-util.js",
+      "pluginId": "cordova-plugin-local-notification",
+      "merges": [
+        "cordova.plugins.notification.local.core",
+        "plugin.notification.local.core"
+      ]
+    },
+    {
+      "id": "cordova-plugin-purchases.plugin",
+      "file": "plugins/cordova-plugin-purchases/www/plugin.js",
+      "pluginId": "cordova-plugin-purchases",
+      "clobbers": [
+        "Purchases"
+      ]
+    },
+    {
+      "id": "cordova-plugin-native-spinner.SpinnerDialog",
+      "file": "plugins/cordova-plugin-native-spinner/www/SpinnerDialog.js",
+      "pluginId": "cordova-plugin-native-spinner",
+      "clobbers": [
+        "SpinnerDialog"
       ]
     }
   ],
   "plugin_metadata": {
-    "cordova-plugin-firebasex": "16.0.0"
+    "cordova-plugin-device": "2.1.0",
+    "cordova-plugin-badge": "0.8.8",
+    "cordova-plugin-local-notification": "0.9.0-beta.2",
+    "cordova-annotated-plugin-android": "1.0.4",
+    "cordova-plugin-add-swift-support": "2.0.2",
+    "cordova-plugin-purchases": "3.10.0",
+    "cordova-plugin-native-spinner": "1.1.4"
   }
 }

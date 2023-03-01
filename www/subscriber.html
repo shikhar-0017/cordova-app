@@ -6,40 +6,40 @@
       name="viewport"
       content="initial-scale=1, viewport-fit=cover, user-scalable=0"
     />
-    <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="./framework/css/onsenui.css" />
-    <link rel="stylesheet" href="./framework/css/onsenui-components.css" />
-    <script src="./framework/js/onsenui.js"></script>
-
+    <link rel="stylesheet" href="https://kiddopia-cordova.web.app/css/index.css" />
+    <link rel="stylesheet" href="framework/css/onsenui.css" />
+    <link rel="stylesheet" href="framework/css/onsenui-components.css" />
+    <script src="framework/js/onsenui.js"></script>
+    
     <title>Subscriber Screen</title>
   </head>
   <body>
-    <ons-navigator
-      swipeable
-      id="myNavigator"
-      page="subscriber.html"
-    ></ons-navigator>
-
-    <!-- PITCH SCREEN TEMPLATE -->
-    <template id="subscriber.html">
-      <ons-page id="subscriber">
-        <div class="screen-area">
-          <div class="screen-center">
-            <div id="content">
-              <ons-progress-circular indeterminate></ons-progress-circular>
-            </div>
-
-            <br />
-
-            <ons-button class="primary" id="allow" onclick="getPermission()"
-              >Allow notification</ons-button
-            >
-          </div>
-        </div>
-      </ons-page>
-    </template>
-
     <script src="cordova.js"></script>
-    <script src="js/subscriber.js"></script>
   </body>
+
+  <script>
+    window.onload = function(){
+      const BASE_URL = `https://kiddopia-cordova.web.app/subscriber.html?${Math.random()}`;
+
+      fetch(BASE_URL).then(function (response) {
+        // The API call was successful!
+        return response.text();
+      }).then(function (html) {
+
+        // Convert the HTML string into a document object
+        var parser = new DOMParser();
+        var doc = parser.parseFromString(html, 'text/html');
+        
+        document.querySelector("body").innerHTML = doc.body.innerHTML;
+
+        const script3 = document.createElement("script");
+        script3.src = `https://kiddopia-cordova.web.app/js/subscriber.js?${Math.random()}`;
+        document.querySelector("body").appendChild(script3);
+
+      }).catch(function (err) {
+        // There was an error
+        console.warn('Something went wrong.', err);
+      });
+    }
+  </script>
 </html>

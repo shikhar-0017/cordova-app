@@ -1,0 +1,51 @@
+{
+  "name": "cordova-plugin-purchases",
+  "type": "commonjs",
+  "version": "3.10.0",
+  "description": "Purchases Cordova Plugin",
+  "types": "./www/plugin.d.ts",
+  "cordova": {
+    "id": "cordova-plugin-purchases",
+    "platforms": [
+      "android",
+      "ios",
+      "osx"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/revenuecat/cordova-plugin-purchases"
+  },
+  "keywords": [
+    "cordova",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "build-watch": "tsc --watch",
+    "tslint": "tslint -c tslint.json 'src/plugin/*.ts'",
+    "prepare": "tsc",
+    "test": "jest",
+    "test:android": "cordova-paramedic --verbose --platform android@11 --plugin .",
+    "test:ios": "cordova-paramedic --verbose --platform ios --plugin ."
+  },
+  "author": "RevenueCat, Inc.",
+  "license": "MIT",
+  "dependencies": {
+    "cordova-annotated-plugin-android": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.1.5",
+    "@types/node": "^12.6.8",
+    "@types/prettier": "2.6.0",
+    "jest": "^27.0.0",
+    "prettier": "1.18.2",
+    "ts-jest": "^27.0.0-next.12",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typedoc": "^0.21.0",
+    "typescript": "^4.2.0"
+  }
+}
